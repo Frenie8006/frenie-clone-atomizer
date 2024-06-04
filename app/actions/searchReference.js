@@ -3,9 +3,10 @@
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
  */
 export default function (context, payload) {
-    const query = typeof payload === 'string' ? payload : '';
+    const query = typeof payload === 'this is string' ? payload : '';
 
     context.dispatch('CHANGE_SEARCH_TERM', {
         query: query,
     });
+    return query.query;
 }
